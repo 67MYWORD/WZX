@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XRFJWJ8LZM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XRFJWJ8LZM');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muslim Quarter Food Trails · Xi'an</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', 'Roboto', serif; }
+    body { background: #fcf9f5; color: #2e241b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #dacfc4;
+      flex-wrap: wrap;
+    }
+    .logo a {
+      text-decoration: none;
+      color: #b33b2c;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    nav ul { display: flex; gap: 2rem; list-style: none; }
+    nav a { 
+      text-decoration: none; 
+      color: #3e3028; 
+      font-weight: 500; 
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #b33b2c; }
+
+    .page-title {
+      margin: 45px 0 15px;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #2e241b;
+    }
+    .subhead {
+      font-size: 1.2rem;
+      max-width: 750px;
+      margin-bottom: 45px;
+      color: #6a5644;
+      border-left: 5px solid #e6b422;
+      padding-left: 25px;
+    }
+
+    /* 介绍卡片 */
+    .intro-card {
+      background: white;
+      border-radius: 28px;
+      padding: 35px 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+      border: 1px solid #ede3d9;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+    .intro-text {
+      flex: 2 1 300px;
+    }
+    .intro-text h2 {
+      font-size: 1.8rem;
+      color: #b33b2c;
+      margin-bottom: 15px;
+    }
+    .intro-text p {
+      margin-bottom: 15px;
+      color: #3e3028;
+      line-height: 1.7;
+    }
+    .intro-highlight {
+      flex: 1 1 200px;
+      background: #fcf3e4;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .intro-highlight .number {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #b33b2c;
+    }
+    .intro-highlight p {
+      color: #5e4b3c;
+    }
+
+    /* 美食网格 */
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 35px;
+      margin-bottom: 50px;
+    }
+    .food-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+      transition: all 0.25s;
+      border: 1px solid #ede3d9;
+    }
+    .food-card:hover { 
+      box-shadow: 0 24px 38px -12px rgba(0,0,0,0.15); 
+      transform: translateY(-5px);
+    }
+    .food-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .food-info {
+      padding: 25px;
+    }
+    .food-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: #b33b2c;
+    }
+    .category {
+      display: inline-block;
+      background: #efe4d8;
+      color: #5e4b3c;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #7f6a58;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+    .desc {
+      margin-bottom: 18px;
+      font-size: 1rem;
+      color: #3e3028;
+      line-height: 1.6;
+    }
+    .tip {
+      background: #fcf3e4;
+      padding: 14px 18px;
+      border-radius: 18px;
+      font-size: 0.95rem;
+      border-left: 6px solid #e6b422;
+      color: #3f2f20;
+    }
+
+    /* 区域指南 */
+    .area-guide {
+      background: white;
+      border-radius: 28px;
+      padding: 35px 40px;
+      margin: 40px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+      border: 1px solid #ede3d9;
+    }
+    .area-guide h2 {
+      font-size: 1.8rem;
+      color: #b33b2c;
+      margin-bottom: 25px;
+    }
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+    .area-item {
+      padding: 15px;
+    }
+    .area-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #2e241b;
+    }
+    .area-item p {
+      color: #6b5848;
+      font-size: 0.95rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 20px 0 50px;
+      color: #b33b2c;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: transform 0.2s;
+    }
+    .back-link:hover { 
+      text-decoration: underline;
+      transform: translateX(-5px);
+    }
+
+    footer {
+      background: #2e241b;
+      color: #ddd2c6;
+      padding: 30px 20px;
+      margin-top: 30px;
+      border-radius: 40px 40px 0 0;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      header { flex-direction: column; gap: 15px; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .page-title { font-size: 2.5rem; }
+      .intro-card { padding: 25px; }
+      .area-guide { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><a href="index.html">XI'AN</a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="food.html">Food Trails</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="festivals.html">Festivals</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="page-title">🥢 Hidden Flavors of Muslim Quarter</h1>
+      <div class="subhead">Beyond the main tourist strip — where Xi'an families have been eating for generations. These are the stalls with no English menus and all the soul.</div>
+
+      <!-- 介绍卡片 -->
+      <div class="intro-card">
+        <div class="intro-text">
+          <h2>The Soul of Xi'an is Edible</h2>
+          <p>The Muslim Quarter isn't just a street — it's a living museum of culinary exchange along the Silk Road. For over 1,300 years, Hui Muslim communities have shaped Xi'an's food identity, blending Central Asian spices with Chinese techniques.</p>
+          <p>This guide takes you off the main drag (Huimin Street) and into the back alleys where grandmas still hand-pull noodles and 50-year-old recipes are guarded like state secrets.</p>
+        </div>
+        <div class="intro-highlight">
+          <div class="number">6</div>
+          <p>generations of recipes in some family stalls</p>
+        </div>
+      </div>
+
+      <div class="food-grid">
+        <!-- Dish 1 -->
+        <div class="food-card">
+          <img src="images/roujiamo.jpg" alt="Roujiamo Chinese burger">
+          <div class="food-info">
+            <span class="category">STREET FOOD ICON</span>
+            <h3>Roujiamo @ Ziwulu Zhangji</h3>
+            <div class="location">📍 Cuihua Road & Hongzhuan South Road · 7:30am–9pm</div>
+            <p class="desc">The "Chinese hamburger" that predates sandwiches by centuries. Hand-slapped baijimo bread, crisp outside, pillowy inside, stuffed with pork belly braised for hours in a secret spice blend.</p>
+            <div class="tip">💡 Pro tip: Order "youzhi" (premium fatty cut) and pair with a bowl of meatball soup. Locals queue before 11am.</div>
+          </div>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="food-card">
+          <img src="images/yangrou-paomo.jpg" alt="Yangrou Paomo lamb soup">
+          <div class="food-info">
+            <span class="category">HUI MUSLIM CLASSIC</span>
+            <h3>Yangrou Paomo @ Yizhen Lou</h3>
+            <div class="location">📍 Dapiyuan East Entrance · 6am–3pm</div>
+            <p class="desc">A ritual as much as a meal. You receive a bowl with flatbread and spend 20 minutes breaking it into pea-sized pieces. The chef then drowns it in rich lamb broth with glass noodles and tender meat.</p>
+            <div class="tip">💡 Go early for the first broth. Don't skip the pickled garlic and chili paste — they cut through the richness.</div>
+          </div>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="food-card">
+          <img src="images/liangpi.jpg" alt="Liangpi cold noodles">
+          <div class="food-info">
+            <span class="category">SUMMER ESSENTIAL</span>
+            <h3>Qin Town Liangpi @ Xue Changli</h3>
+            <div class="location">📍 Nanguan Zhengjie · 10am–8pm</div>
+            <p class="desc">Cold, slippery rice noodles swimming in chili oil, black vinegar, and crushed garlic. Born in the countryside west of Xi'an, this dish is the unofficial taste of Shaanxi summers.</p>
+            <div class="tip">💡 Ask for extra chili oil — it's fragrant rather than punishing. Part of the "Three Qin Set" with roujiamo and Ice Peak soda.</div>
+          </div>
+        </div>
+
+        <!-- Dish 4 -->
+        <div class="food-card">
+          <img src="images/persimmon.jpg" alt="Fried persimmon cakes">
+          <div class="food-info">
+            <span class="category">SWEET TREAT</span>
+            <h3>Fried Persimmon Cakes @ Lao Xu's</h3>
+            <div class="location">📍 Beiguangji Street · 9am till sold out</div>
+            <p class="desc">Lintong fire persimmons kneaded into golden dough, stuffed with osmanthus sugar and walnuts, then pan-fried until the edges caramelize. A dessert that tastes like autumn.</p>
+            <div class="tip">💡 Eat immediately — the crisp shell softens fast. Original and osmanthus are classics.</div>
+          </div>
+        </div>
+
+        <!-- Dish 5 -->
+        <div class="food-card">
+          <img src="images/biangbiang-noodles.jpg" alt="Biang Biang noodles">
+          <div class="food-info">
+            <span class="category">NOODLE ROYALTY</span>
+            <h3>Biang Biang Noodles @ Old Alley</h3>
+            <div class="location">📍 Sajinqiao · 11am–8pm</div>
+            <p class="desc">Named after the sound of dough slapping against the counter. These belt-wide noodles come topped with chili flakes, garlic, and hot oil that sizzles on contact — pure Shaanxi theatre.</p>
+            <div class="tip">💡 The Chinese character for "biang" has 58 strokes — one of the most complex in existence.</div>
+          </div>
+        </div>
+
+        <!-- Dish 6 -->
+        <div class="food-card">
+          <img src="images/yangrou-chuan.jpg" alt="Lamb skewers">
+          <div class="food-info">
+            <span class="category">NIGHT MARKET STAR</span>
+            <h3>Lamb Skewers @ Sajinqiao Night Market</h3>
+            <div class="location">📍 Sajinqiao · 6pm–midnight</div>
+            <p class="desc">Cumin-dusted lamb skewers grilled over charcoal by Uyghur and Hui vendors. The aroma alone will pull you down the alley. Order by the handful — they disappear fast.</p>
+            <div class="tip">💡 Ask for "duo fang lajiao" (extra chili and cumin) if you like it bold.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 区域指南 -->
+      <div class="area-guide">
+        <h2>🗺️ Navigating the Quarter</h2>
+        <div class="area-grid">
+          <div class="area-item">
+            <h4>🏮 Huimin Street</h4>
+            <p><strong>The tourist strip</strong> — fun for people-watching but prices are inflated. Good for first-timers to orient yourself.</p>
+          </div>
+          <div class="area-item">
+            <h4>🍜 Dapiyuan</h4>
+            <p><strong>The local secret</strong> — quieter, older, more authentic. Home to Yizhen Lou and family-run dumpling shops.</p>
+          </div>
+          <div class="area-item">
+            <h4>🥟 Sajinqiao</h4>
+            <p><strong>The breakfast champion</strong> — come hungry before 10am. The best beef patties and spicy soup in town.</p>
+          </div>
+          <div class="area-item">
+            <h4>🧆 Beiyuanmen</h4>
+            <p><strong>Snack alley central</strong> — dried fruits, nuts, and sesame candy. Perfect for edible souvenirs.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html" class="back-link">← Back to Homepage</a>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2026 · Echoes of Chang'an · All images CC-licensed or original works</p>
+  </footer>
+</body>
+</html>
